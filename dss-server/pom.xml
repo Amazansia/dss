@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>dss</artifactId>
+        <groupId>io.github.ztkmkoo</groupId>
+        <version>0.4.4</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>dss-server</artifactId>
+    <version>0.4.4</version>
+
+    <name>DSS</name>
+    <description>Distributed server system</description>
+    <url>https://github.com/ztkmkoo/dss</url>
+
+    <licenses>
+        <license>
+            <name>Apache-2.0</name>
+            <url>https://opensource.org/licenses/Apache-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>MinKoo Kang</name>
+            <email>ztkmkoo@gmail.com</email>
+            <organization>ztkmkoo</organization>
+            <organizationUrl>https://ztkmkoo.github.io/</organizationUrl>
+            <timezone>GMT+0900</timezone>
+        </developer>
+    </developers>
+	<properties>
+        <!-- Dependencies version -->
+        <akka.version>2.6.3</akka.version>
+    </properties>
+    <dependencies>
+        <!--dss core model-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>dss-core</artifactId>
+            <version>0.4.4</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <!--Akka actor-->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor-typed_2.13</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+        </plugins>
+    </build>
+</project>

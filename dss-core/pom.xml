@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>io.github.ztkmkoo</groupId>
+        <artifactId>dss</artifactId>
+        <version>0.4.4</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>dss-core</artifactId>
+    <version>0.4.4</version>
+    <packaging>jar</packaging>
+
+    <name>DSS CORE</name>
+    <description>Distributed server system</description>
+    <url>https://github.com/ztkmkoo/dss</url>
+    
+    <properties>
+        <!-- Dependencies version -->
+        <akka.version>2.6.3</akka.version>
+        <jackson.version>2.10.2</jackson.version>
+        <netty.version>4.1.45.Final</netty.version>
+        <logback.version>1.2.3</logback.version>
+        <mockito.version>1.10.19</mockito.version>
+    </properties>
+    
+    <dependencies>
+        <!--dss common sub model-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>dss-common</artifactId>
+            <version>0.4.4</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--Akka actor-->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor-typed_2.13</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+
+        <!--Netty-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty.version}</version>
+        </dependency>
+
+        <!--Jackson-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!--Test logback-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
+        <!--Mockito test-->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--Mockito test-->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor-testkit-typed_2.13</artifactId>
+            <version>${akka.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
